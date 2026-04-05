@@ -222,7 +222,7 @@ def tab_about():
     st.markdown("""
     ### Model
     This calculator uses **XGBoost Classifier**. The whole process of data analysis, preprocessing and
-    model creating is documented here in [Jupyter Notebook](https://www.kaggle.com/code/olek285/wewewe).
+    model creating is documented here in [Jupyter Notebook](https://github.com/olek2852/Pre-approval-credit-risk-scorer/blob/main/credit_notebook.ipynb).
     
     **Metrics:**
     * **ROC-AUC score:** 0.701
