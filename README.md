@@ -1,18 +1,23 @@
-# 🏦 Pre-approval Credit Risk Scorer
+# 🏦 Pre-approval credit risk scorer
 
 ## Overview
 End-to-end ML project that automates preliminary credit risk assessment. 
-The system evaluates loan applications at an early stage based on 
-applicant financial data, before any internal loan grades or rates are assigned.
+The system evaluates loan applications at an early stage using only data 
+available before approval (such as FICO, DTI, and employment 
+history), intentionally excluding post-approval metrics like loan grade or 
+interest rate to simulate a real pre-approval scenario.
 
-**[Live demo](your-streamlit-link)**
+**[Live demo link](your-streamlit-link)**
+
+## UI Preview
+![Calculator](form.png)
 
 ## Objective
 In lending, reducing defaults while maintaining approval rate is critical. 
 This project focuses on:
 - Identifying high-risk applicants before final approval.
-- Avoiding data leakage by excluding post-approval features, simulating a true pre-approval scenario.
-- Maximizing Recall to ensure high-risk borrowers are flagged to minimize potential financial losses.
+- Avoiding data leakage by excluding post-approval features.
+- Maximizing Recall to ensure high risk borrowers are flagged to minimize potential financial losses.
 
 ## Project structure
 The project is split into two stages:
