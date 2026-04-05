@@ -40,6 +40,15 @@ feature visualizations.
 ## Tech stack
 Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, XGBoost, Optuna, Streamlit
 
+## Repository structure
+```
+├── app.py                    # Streamlit app
+├── credit_model.pkl          # Trained model
+├── credit_notebook.ipynb     # Jupyter notebbok with EDA, preprocessing and model training
+├── feature_importances.png   # SHAP feature importance plot
+├── requirements.txt          
+├── train_small.csv           # 50K records sample dataset
+```
 ## Run locally
 1. Clone the repository
 2. `pip install -r requirements.txt`
