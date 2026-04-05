@@ -1,0 +1,46 @@
+# 🏦 Pre-approval Credit Risk Scorer
+
+## Overview
+End-to-end ML project that automates preliminary credit risk assessment. 
+The system evaluates loan applications at an early stage based on 
+applicant financial data, before any internal loan grades or rates are assigned.
+
+**[Live demo](your-streamlit-link)**
+
+## Objective
+In lending, reducing defaults while maintaining approval rate is critical. 
+This project focuses on:
+- Identifying high-risk applicants before final approval.
+- Avoiding data leakage by excluding post-approval features, simulating a true pre-approval scenario.
+- Maximizing Recall to ensure high-risk borrowers are flagged to minimize potential financial losses.
+
+## Project structure
+The project is split into two stages:
+
+**Stage 1: Modelling (Jupyter Notebook)**  
+Data cleaning and EDA on 2.2M records, feature engineering, XGBoost training 
+with Optuna hyperparameter tuning and model explainability using SHAP analysis. Includes handling severe class imbalance (80:20) and threshold optimization for Recall.
+
+**Stage 2: Deployment (Streamlit)**  
+Interactive web app serving model predictions. Includes input validation, 
+session-based prediction history, and dataset insights with interactive 
+feature visualizations.
+
+## Model performance
+| Metric | Value |
+|--------|-------|
+| ROC-AUC | 0.701 |
+| Gini | 0.402 |
+| Recall (threshold 0.4) | 0.83 |
+
+## Dataset
+[All Lending Club loan data](https://www.kaggle.com/datasets/wordsforthewise/lending-club) 
+2.2M records, significant missing values, 80:20 class imbalance.
+
+## Tech stack
+Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, XGBoost, Optuna, Streamlit
+
+## Run locally
+1. Clone the repository
+2. `pip install -r requirements.txt`
+3. `streamlit run app.py`
