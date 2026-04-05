@@ -7,7 +7,7 @@ available before approval (such as FICO, DTI, and employment
 history), intentionally excluding post-approval metrics like loan grade or 
 interest rate to simulate a real pre-approval scenario.
 
-**[Live demo link](your-streamlit-link)**
+**[Live demo link](https://olek2852-pre-approval-credit-risk-scorer-app-k7tjc8.streamlit.app/)**
 
 ## UI Preview
 ![Calculator](form.png)
@@ -27,9 +27,9 @@ Data cleaning and EDA on 2.2M records, feature engineering, XGBoost training
 with Optuna hyperparameter tuning and model explainability using SHAP analysis. Includes handling severe class imbalance (80:20) and threshold optimization for Recall.
 
 **Stage 2: Deployment (Streamlit)**  
-Interactive web app serving model predictions. Includes input validation, 
-session-based prediction history, and dataset insights with interactive 
-feature visualizations.
+Web app that runs the model in real time. Users can input applicant data, 
+get a risk score with probability, and browse prediction history for the 
+current session. The About tab includes interactive EDA and SHAP charts from the dataset.
 
 ## Model performance
 | Metric | Value |
