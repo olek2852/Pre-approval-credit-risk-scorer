@@ -23,8 +23,7 @@ This project focuses on:
 The project is split into two stages:
 
 **Stage 1: Modelling (Jupyter Notebook)**  
-Data cleaning and EDA on 2.2M records, feature engineering, XGBoost training 
-with Optuna hyperparameter tuning and model explainability using SHAP analysis. Includes handling severe class imbalance (80:20) and threshold optimization for Recall.
+Data cleaning and EDA on 2.2M records, integrated into a Scikit-Learn Pipeline for feature engineering and XGBoost training. Includes Optuna hyperparameter tuning, handling severe class imbalance (80:20), threshold optimization for Recall, and model explainability using SHAP.
 
 **Stage 2: Deployment (Streamlit)**  
 Web app that runs the model in real time. Users can input applicant data, 
