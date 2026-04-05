@@ -51,6 +51,7 @@ Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, XGBoost, Optuna, Streamlit
 ├── credit_model.pkl          # Trained model
 ├── credit_notebook.ipynb     # Jupyter notebbok with EDA, preprocessing and model training
 ├── feature_importances.png   # SHAP feature importance plot
+├── form.png                  # UI screenshot
 ├── requirements.txt          
 ├── train_small.csv           # 50K records sample dataset
 ```
