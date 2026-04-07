@@ -12,6 +12,10 @@ interest rate to simulate a real pre-approval scenario.
 ## UI Preview
 ![Calculator](form.png)
 
+
+https://github.com/user-attachments/assets/d77b29b7-8fd5-47c5-bd6b-fa1358b06507
+
+
 ## Objective
 In lending, reducing defaults while maintaining approval rate is critical. 
 This project focuses on:
