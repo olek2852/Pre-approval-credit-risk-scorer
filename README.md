@@ -10,8 +10,8 @@ interest rate to simulate a real pre-approval scenario.
 **[Live demo link](https://olek2852-pre-approval-credit-risk-scorer-app-k7tjc8.streamlit.app/)**
 
 ## UI Preview
-<p align="center">
-  <img src="form.png" width="600" alt="App Screenshot">
+<p align="left">
+  <img src="form.png" width="400" height="400" alt="App Screenshot">
 </p>
 
 https://github.com/user-attachments/assets/d77b29b7-8fd5-47c5-bd6b-fa1358b06507
