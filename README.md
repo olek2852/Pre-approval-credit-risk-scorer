@@ -11,7 +11,7 @@ interest rate to simulate a real pre-approval scenario.
 
 ## UI Preview
 <p align="left">
-  <img src="form.png" width="400" height="400" alt="App Screenshot">
+  <img src="form.png" width="400" height="600" alt="App Screenshot">
 </p>
 
 https://github.com/user-attachments/assets/d77b29b7-8fd5-47c5-bd6b-fa1358b06507
