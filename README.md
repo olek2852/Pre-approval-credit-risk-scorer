@@ -24,6 +24,25 @@ This project focuses on:
 - Building a robust predictive scorer to identify high-risk applicants before final approval.
 - Maximizing Recall to ensure high risk borrowers are flagged to minimize potential financial losses.
 
+## Key insights
+Based on the extensive data analysis and the SHAP summary plot, the project identified three dominant risk factors driving credit risk in this pre-approval scenario. The reasoning behind the data and the model’s decisions is explained below, divided by category::
+
+**Credit related features:**
+
+- **Loan term is the most powerful categorical predictor.** Long term loans (60 months) present an exceptionally high inherent risk, with 35% ending in default. Conversely, short-term loans (36 months) are a strong protective factor for the lender, presenting a much lower default rate of 17%.
+
+- **Borrowers requesting larger loan amounts are consistently categorized as higher risk.** High feature values are a strong driver of defaults, while low amounts correlate with a higher probability of repayment.
+
+- **Borrowing for business is more risky:** Applicants seeking funds to start or grow a business are significantly more likely to default, showing a 32% default rate. On the other hand, loans taken for credit card refinancing (18% defaults) or car purchases (16% defaults) act as strong protective factors.
+
+Applicant related features:
+
+- **FICO score is the primary signal of financial health.** It is the strongest force pushing predictions towards default. High FICO scores act as the most powerful overall factor in reducing default risk, directly signaling a strong history of repayment.
+
+- **The debt-to-income ratio is a major driver of risk.** High feature values consistently push predictions towards default, as borrowers with significant existing debt relative to their income are more likely to experience repayment difficulties.
+
+- **Annual income dictates capacity for repayment.** Higher annual incomes demonstrate the underlying financial stability and the capacity to meet loan obligations, notably reducing the likelihood of default. Low income correlates directly with higher risk.
+  
 ## Project structure
 The project is split into two stages:
 
