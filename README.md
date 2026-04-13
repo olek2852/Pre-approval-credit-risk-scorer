@@ -63,7 +63,7 @@ In preliminary credit risk modeling, predicting human behavior using only pre-ap
   
 Recall (0.83): The model successfully flags 83% of all actual defaults. This aligns with the primary business objective: catching potential financial losses as early as possible.
 
-Precision (0.28): This high recall comes at the cost of lower precision, leading to a high rate of false positives. In a real-world pre-approval scenario, this is an acceptable trade off. Applicants flagged by this model wouldn't be outright rejected; instead, they would be routed for manual underwriting review or required to provide additional documentation
+Precision (0.28): This high recall comes at the cost of lower precision, leading to a high rate of false positives. In a real-world pre-approval scenario, this is an acceptable trade off. Applicants flagged by this model wouldn't be outright rejected. Instead, they would be routed for manual underwriting review or required to provide additional documentation.
 
 ## Dataset
 [All Lending Club loan data](https://www.kaggle.com/datasets/wordsforthewise/lending-club) 
