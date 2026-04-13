@@ -25,7 +25,7 @@ This project focuses on:
 - Maximizing Recall to ensure high risk borrowers are flagged to minimize potential financial losses.
 
 ## Key insights
-<p align="center">
+<p align="left">
   <img src="feature_importances.png" width="400" alt="SHAP plot">
 </p>
 Based on the extensive data analysis and the SHAP summary plot, the project identified dominant risk factors driving credit risk in this pre-approval scenario. The reasoning behind the data and the model’s decisions is explained below, divided by category:
