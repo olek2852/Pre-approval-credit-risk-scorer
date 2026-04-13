@@ -31,19 +31,13 @@ This project focuses on:
 Based on the extensive data analysis and the SHAP summary plot, the project identified dominant risk factors driving credit risk in this pre-approval scenario. The reasoning behind the data and the model’s decisions is explained below, divided by category:
 
 **Credit related features:**
-
 - **Loan term is the most powerful categorical predictor.** Long term loans (60 months) present an exceptionally high inherent risk, with 35% ending in default. Conversely, short-term loans (36 months) are a strong protective factor for the lender, presenting a much lower default rate of 17%.
-
 - **Borrowers requesting larger loan amounts are consistently categorized as higher risk.** High feature values are a strong driver of defaults, while low amounts correlate with a higher probability of repayment.
-
 - **Borrowing for business is more risky:** Applicants seeking funds to start or grow a business are significantly more likely to default, showing a 32% default rate. On the other hand, loans taken for credit card refinancing (18% defaults) or car purchases (16% defaults) act as strong protective factors.
-
+  
 **Applicant related features:**
-
 - **FICO score is the primary signal of financial health.** It is the strongest force pushing predictions towards default. High FICO scores act as the most powerful overall factor in reducing default risk, directly signaling a strong history of repayment.
-
 - **The debt-to-income ratio is a major driver of risk.** High feature values consistently push predictions towards default, as borrowers with significant existing debt relative to their income are more likely to experience repayment difficulties.
-
 - **Annual income dictates capacity for repayment.** Higher annual incomes demonstrate the underlying financial stability and the capacity to meet loan obligations, notably reducing the likelihood of default. Low income correlates directly with higher risk.
   
 ## Project structure
@@ -63,6 +57,7 @@ In preliminary credit risk modeling, predicting human behavior using only pre-ap
 | Gini | 0.402 |
 | Recall (threshold 0.4) | 0.83 |
 
+- **Baseline comparison:** A standard Logistic Regression was evaluated as a baseline (ROC-AUC 0.686). The chosen XGBoost model successfully outperformed it, demonstrating its ability to capture complex, non-linear relationships within the credit profiles that simpler linear models missed.
 - **ROC-AUC & Gini:** A Gini coefficient of 0.402 (AUC ~0.70) indicates a strong predictive capability for early-stage behavioral and financial data, effectively separating reliable from risky applicants without relying on deep credit bureau history.
 - **Business driven Recall:** By optimizing the decision threshold to 0.4, the model successfully flags **83% of all actual defaults**. This conservative approach perfectly aligns with the business objective: catching potential financial losses early in the funnel, even at the cost of a higher false-positive rate (which can be manually reviewed later).
 
@@ -71,9 +66,10 @@ In preliminary credit risk modeling, predicting human behavior using only pre-ap
 2.2M records, significant missing values, 80:20 class imbalance.
 
 **Limitations & context**
+
 It is important to note that Lending Club is a Peer-to-Peer lending platform. The borrower demographic often includes individuals consolidating heavy existing debt or those who might have been rejected by traditional banks. 
 
-Consequently, the baseline default rate in this dataset (~20%) is significantly higher than in typical commercial bank portfolios. The model's baseline risk assumptions reflect this specific, high-risk P2P lending environment, meaning the absolute probability scores might need recalibration if applied to a standard, real-life banking population.
+Consequently, the baseline default rate in this dataset (~20%) is significantly higher than in typical commercial bank portfolios. The model's baseline risk assumptions reflect this high-risk P2P lending environment, meaning the absolute probability scores might need recalibration if applied to a standard, real-life banking population.
 
 ## Tech stack
 **Data analysis & visualization:** Pandas, NumPy, Matplotlib, Seaborn, Streamlit  
