@@ -20,20 +20,18 @@ https://github.com/user-attachments/assets/d77b29b7-8fd5-47c5-bd6b-fa1358b06507
 ## Objective
 In lending, reducing defaults while maintaining approval rate is critical. 
 This project focuses on:
-- Identifying high-risk applicants before final approval.
-- Avoiding data leakage by excluding post-approval features.
+- Identifying the underlying characteristics of high-risk borrowers through extensive EDA.
+- Building a robust predictive scorer to identify high-risk applicants before final approval.
 - Maximizing Recall to ensure high risk borrowers are flagged to minimize potential financial losses.
 
 ## Project structure
 The project is split into two stages:
 
-**Stage 1: Modelling (Jupyter Notebook)**  
-Data cleaning and EDA on 2.2M records, integrated into a Scikit-Learn Pipeline for feature engineering and XGBoost training. Includes Optuna hyperparameter tuning, handling severe class imbalance (80:20), threshold optimization for Recall, and model explainability using SHAP.
+**Stage 1: Data analysis & modelling (Jupyter Notebook)**  
+Extensive data cleaning and exploratory data analysis on 2.2M records to extract actionable business insights. The analytical foundation was then integrated into a Scikit-Learn Pipeline for feature engineering and model training. Includes Optuna hyperparameter tuning, handling severe class imbalance (80:20), threshold optimization for Recall, and model explainability using SHAP.
 
-**Stage 2: Deployment (Streamlit)**  
-Web app that runs the model in real time. Users can input applicant data, 
-get a risk score with probability, and browse prediction history for the 
-current session. The About tab includes interactive EDA and SHAP charts from the dataset.
+**Stage 2: Interactive dashboard (Streamlit)**  
+A comprehensive web app that not only provides risk scoring based on user inputs, but also allows users to explore EDA charts and SHAP values in the "About" tab to uncover the reasoning behind the data and the model's decisions.
 
 ## Model performance
 | Metric | Value |
