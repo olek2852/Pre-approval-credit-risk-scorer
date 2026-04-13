@@ -51,11 +51,12 @@ A comprehensive web app that not only provides risk scoring based on user inputs
 
 ## Model performance
 In preliminary credit risk modeling, predicting human behavior using only pre-approval data is highly complex. The goal was not to achieve perfect accuracy, but to create a robust initial filter.
-| Metric | Value |
-|--------|-------|
-| ROC-AUC | 0.701 |
-| Gini | 0.402 |
-| Recall (threshold 0.4) | 0.83 |
+
+| Metric | XGBoost | Logistic Regression (Baseline) |
+|--------|---------|--------------------------------|
+| ROC-AUC | **0.701** | 0.686 |
+| Gini | **0.402** | 0.372 |
+| Recall (threshold 0.4) | 0.83 | --- |
 
 - **Baseline comparison:** A standard Logistic Regression was evaluated as a baseline (ROC-AUC 0.686). The chosen XGBoost model successfully outperformed it, demonstrating its ability to capture complex, non-linear relationships within the credit profiles that simpler linear models missed.
 - **ROC-AUC & Gini:** A Gini coefficient of 0.402 (AUC ~0.70) indicates a strong predictive capability for early-stage behavioral and financial data, effectively separating reliable from risky applicants without relying on deep credit bureau history.
