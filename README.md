@@ -1,7 +1,7 @@
 # 🏦 Pre-approval credit risk scorer
 
 ## Overview
-End-to-end ML project that automates preliminary credit risk assessment. 
+Data analysis and machine learning project focused on understanding and predicting preliminary credit risk. 
 The system evaluates loan applications at an early stage using only data 
 available before approval (such as FICO, DTI, and employment 
 history), intentionally excluding post-approval metrics like loan grade or 
@@ -10,8 +10,9 @@ interest rate to simulate a real pre-approval scenario.
 **[Live demo link](https://olek2852-pre-approval-credit-risk-scorer-app-k7tjc8.streamlit.app/)**
 
 ## UI Preview
-![Calculator](form.png)
-
+<p align="center">
+  <img src="form.png" width="600" alt="App Screenshot">
+</p>
 
 https://github.com/user-attachments/assets/d77b29b7-8fd5-47c5-bd6b-fa1358b06507
 
