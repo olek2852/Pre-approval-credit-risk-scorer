@@ -30,7 +30,6 @@ This project focuses on:
 </p>
 Based on the extensive data analysis and the SHAP summary plot, the project identified dominant risk factors driving credit risk in this pre-approval scenario. The reasoning behind the data and the model’s decisions is explained below, divided by category:
 
-
 **Credit related features:**
 - **Loan term is the most powerful categorical predictor.** Long term loans (60 months) present an exceptionally high inherent risk, with 35% ending in default. Conversely, short-term loans (36 months) are a strong protective factor for the lender, presenting a much lower default rate of 17%.
 - **Borrowers requesting larger loan amounts are consistently categorized as higher risk.** High feature values are a strong driver of defaults, while low amounts correlate with a higher probability of repayment.
@@ -60,8 +59,7 @@ In preliminary credit risk modeling, predicting human behavior using only pre-ap
 
 - **Baseline comparison:** A standard Logistic Regression was evaluated as a baseline (ROC-AUC 0.686). The chosen XGBoost model successfully outperformed it, demonstrating its ability to capture complex, non-linear relationships within the credit profiles that simpler linear models missed.
 - **ROC-AUC & Gini:** A Gini coefficient of 0.402 (AUC ~0.70) indicates a strong predictive capability for early-stage behavioral and financial data, effectively separating reliable from risky applicants without relying on deep credit bureau history.
-- **Business driven Recall:** By optimizing the decision threshold to 0.4, the model successfully flags **83% of all actual defaults**. This conservative approach perfectly aligns with the business objective: catching potential financial losses early in the funnel, even at the cost of a higher false-positive rate (which can be manually reviewed later).
-
+- 
 - **Precision-Recall Trade-off:** Because the dataset is heavily imbalanced (80:20), a strategic decision was made to lower the classification threshold to 0.4.
 
 Recall (0.83): The model successfully flags 83% of all actual defaults. This aligns with the primary business objective: catching potential financial losses as early as possible.
