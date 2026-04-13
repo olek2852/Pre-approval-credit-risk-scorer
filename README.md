@@ -34,11 +34,6 @@ Based on the extensive data analysis and the SHAP summary plot, the project iden
 **Credit related features:**
 - **Loan term is the most powerful categorical predictor.** Long term loans (60 months) present an exceptionally high inherent risk, with 35% ending in default. Conversely, short-term loans (36 months) are a strong protective factor for the lender, presenting a much lower default rate of 17%.
 - **Borrowers requesting larger loan amounts are consistently categorized as higher risk.** High feature values are a strong driver of defaults, while low amounts correlate with a higher probability of repayment.
-
-**Precision-Recall Trade-off:**
-Because the dataset is heavily imbalanced (80:20), a strategic decision was made to lower the classification threshold to 0.4. 
-- **Recall (0.83):** The model successfully flags 83% of all actual defaults. This aligns with the primary business objective: catching potential financial losses as early as possible.
-- **Precision (0.28):** This high recall comes at the cost of lower precision, leading to a high rate of false positives. In a real-world pre-approval scenario, this is an acceptable trade-off. Applicants flagged by this model wouldn't be outright rejected; instead, they would be routed for manual underwriting review or required to provide additional documentation.
   
 **Applicant related features:**
 - **FICO score is the primary signal of financial health.** It is the strongest force pushing predictions towards default. High FICO scores act as the most powerful overall factor in reducing default risk, directly signaling a strong history of repayment.
@@ -66,6 +61,11 @@ In preliminary credit risk modeling, predicting human behavior using only pre-ap
 - **Baseline comparison:** A standard Logistic Regression was evaluated as a baseline (ROC-AUC 0.686). The chosen XGBoost model successfully outperformed it, demonstrating its ability to capture complex, non-linear relationships within the credit profiles that simpler linear models missed.
 - **ROC-AUC & Gini:** A Gini coefficient of 0.402 (AUC ~0.70) indicates a strong predictive capability for early-stage behavioral and financial data, effectively separating reliable from risky applicants without relying on deep credit bureau history.
 - **Business driven Recall:** By optimizing the decision threshold to 0.4, the model successfully flags **83% of all actual defaults**. This conservative approach perfectly aligns with the business objective: catching potential financial losses early in the funnel, even at the cost of a higher false-positive rate (which can be manually reviewed later).
+
+- **Precision-Recall Trade-off:** Because the dataset is heavily imbalanced (80:20), a strategic decision was made to lower the classification threshold to 0.4.
+
+Recall (0.83): The model successfully flags 83% of all actual defaults. This aligns with the primary business objective: catching potential financial losses as early as possible.
+Precision (0.28): This high recall comes at the cost of lower precision, leading to a high rate of false positives. In a real-world pre-approval scenario, this is an acceptable trade-off. Applicants flagged by this model wouldn't be outright rejected; instead, they would be routed for manual underwriting review or required to provide additional documentation
 
 ## Dataset
 [All Lending Club loan data](https://www.kaggle.com/datasets/wordsforthewise/lending-club) 
