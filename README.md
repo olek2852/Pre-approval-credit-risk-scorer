@@ -59,7 +59,6 @@ In preliminary credit risk modeling, predicting human behavior using only pre-ap
 
 - **Baseline comparison:** A standard Logistic Regression was evaluated as a baseline (ROC-AUC 0.686). The chosen XGBoost model successfully outperformed it, demonstrating its ability to capture complex, non-linear relationships within the credit profiles that simpler linear models missed.
 - **ROC-AUC & Gini:** A Gini coefficient of 0.402 (AUC ~0.70) indicates a strong predictive capability for early-stage behavioral and financial data, effectively separating reliable from risky applicants without relying on deep credit bureau history.
-- 
 - **Precision-Recall Trade-off:** Because the dataset is heavily imbalanced (80:20), a strategic decision was made to lower the classification threshold to 0.4.
 
 Recall (0.83): The model successfully flags 83% of all actual defaults. This aligns with the primary business objective: catching potential financial losses as early as possible.
