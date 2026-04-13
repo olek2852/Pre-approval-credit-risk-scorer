@@ -30,10 +30,15 @@ This project focuses on:
 </p>
 Based on the extensive data analysis and the SHAP summary plot, the project identified dominant risk factors driving credit risk in this pre-approval scenario. The reasoning behind the data and the model’s decisions is explained below, divided by category:
 
+
 **Credit related features:**
 - **Loan term is the most powerful categorical predictor.** Long term loans (60 months) present an exceptionally high inherent risk, with 35% ending in default. Conversely, short-term loans (36 months) are a strong protective factor for the lender, presenting a much lower default rate of 17%.
 - **Borrowers requesting larger loan amounts are consistently categorized as higher risk.** High feature values are a strong driver of defaults, while low amounts correlate with a higher probability of repayment.
-- **Borrowing for business is more risky:** Applicants seeking funds to start or grow a business are significantly more likely to default, showing a 32% default rate. On the other hand, loans taken for credit card refinancing (18% defaults) or car purchases (16% defaults) act as strong protective factors.
+
+**Precision-Recall Trade-off:**
+Because the dataset is heavily imbalanced (80:20), a strategic decision was made to lower the classification threshold to 0.4. 
+- **Recall (0.83):** The model successfully flags 83% of all actual defaults. This aligns with the primary business objective: catching potential financial losses as early as possible.
+- **Precision (0.28):** This high recall comes at the cost of lower precision, leading to a high rate of false positives. In a real-world pre-approval scenario, this is an acceptable trade-off. Applicants flagged by this model wouldn't be outright rejected; instead, they would be routed for manual underwriting review or required to provide additional documentation.
   
 **Applicant related features:**
 - **FICO score is the primary signal of financial health.** It is the strongest force pushing predictions towards default. High FICO scores act as the most powerful overall factor in reducing default risk, directly signaling a strong history of repayment.
