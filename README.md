@@ -45,7 +45,8 @@ A comprehensive web app that not only provides risk scoring based on user inputs
 2.2M records, significant missing values, 80:20 class imbalance.
 
 ## Tech stack
-Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, XGBoost, Optuna, Streamlit
+**Data analysis & visualization:** Pandas, NumPy, Matplotlib, Seaborn, Streamlit  
+**Machine learning:** Scikit-Learn, XGBoost, Optuna, SHAP
 
 ## Repository structure
 ```
