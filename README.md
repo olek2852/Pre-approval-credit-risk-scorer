@@ -43,7 +43,7 @@ Based on the extensive data analysis and the SHAP summary plot, the project iden
 The project is split into two stages:
 
 **Stage 1: Data analysis & modelling (Jupyter Notebook)**  
-Extensive data cleaning and exploratory data analysis on 2.2M records to extract actionable business insights. The analytical foundation was then integrated into a Scikit-Learn Pipeline for feature engineering and model training. Includes Optuna hyperparameter tuning, handling severe class imbalance (80:20), threshold optimization for Recall, and model explainability using SHAP.
+Extensive data cleaning and exploratory data analysis on over 1M records to extract actionable business insights. The analytical foundation was then integrated into a Scikit-Learn Pipeline for feature engineering and model training. Includes Optuna hyperparameter tuning, handling severe class imbalance (80:20), threshold optimization for Recall, and model explainability using SHAP.
 
 **Stage 2: Interactive dashboard (Streamlit)**  
 A comprehensive web app that not only provides risk scoring based on user inputs, but also allows users to explore EDA charts and SHAP values in the "About" tab to uncover the reasoning behind the data and the model's decisions.
